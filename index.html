@@ -111,17 +111,33 @@ tw-icon[alt="Undo"], tw-icon[alt="Redo"] {
     &lt;/h1&gt;
 &lt;/div&gt;
 
-&lt;img src=&quot;snail-podium.png&quot; style=&quot;width: 50%; height: auto;&quot;&gt;
+&lt;img src=&quot;snail-podium.png&quot; style=&quot;width: 100%; height: auto;&quot;&gt;
 
 [[Go-&gt;Act1]]</tw-passagedata><tw-passagedata pid="2" name="Act1" tags="" position="550,500" size="100,100">[[College]] is expensive and you have $&#39;&#39;(print:$Debt)&#39;&#39; to pay off in loans.
 
-Unfortunately in this economy finding entry level jobs with your degree is difficult. Thus you only have one [[option-&gt;betting]]</tw-passagedata><tw-passagedata pid="3" name="College" tags="" position="550,350" size="100,100">You attend a small liberal arts college, and you really like it there! Unfortunately the tutition is crazy expensive and gets higher ever year.
+Unfortunately in this economy finding entry level jobs with your degree is difficult. Thus you only have one [[option-&gt;betting]]
+
+&lt;!--this resets variables if the player decides to play again--&gt;
+(set: $Debt to 50000)
+(set: $Days to 5)
+(set: $SM to false)
+(set: $CB to false)
+(set: $HP to false)
+(set: $JH to false)
+(set: $Pay to false)
+
+(set: $Sagacity to 0)
+(set: $Worldliness to 0)
+(set: $Confusion to 0)
+(set: $IP to &quot;0&quot;)
+(set: $Consumerism to 0)
+(set: $Morality to 0)</tw-passagedata><tw-passagedata pid="3" name="College" tags="" position="550,350" size="100,100">You attend a small liberal arts college, and you really like it there! Unfortunately the tutition is crazy expensive and gets higher every year.
 
 Now you are stuck with $&#39;&#39;(print:$Debt)&#39;&#39; in [[loans!!-&gt;Act1]] </tw-passagedata><tw-passagedata pid="4" name="betting" tags="" position="700,500" size="100,100">That is right! Sports betting!
 
 You know statistically most people lose money, but you are [[different]]. Betting isn&#39;t luck based, its skill based and you know the in&#39;s and out&#39;s. You know how to [[arbitrage bet]] and how to read the points spread. Plus it is supposed fun! why alse would there be so much marketing for it.
 
-While making money is trick, you know just the place to [[start.-&gt;snail racing]]</tw-passagedata><tw-passagedata pid="5" name="different" tags="" position="700,650" size="100,100">You took a 100 level Macroeconomics class as an elective and your pretty sure that makes you more qualified than the average person 
+While making money is tricky, you know just the place to [[start.-&gt;snail racing]]</tw-passagedata><tw-passagedata pid="5" name="different" tags="" position="700,650" size="100,100">You took a 100 level Macroeconomics class as an elective and your pretty sure that makes you more qualified than the average person 
 
 [[Alright time to make money!-&gt;betting]]</tw-passagedata><tw-passagedata pid="6" name="snail racing" tags="" position="850,500" size="100,100">(if:$Days is not 0)[(if:visits is 1)[If you want to pay off your debts, your going to need to go BIG, and &#39;&#39;(text-colour:red)[snail racing]&#39;&#39; is all the rage right now. You find it a little bit strange that people are so excited to watch snails race but according your friend &quot;you can make sooooo much money&quot;]
 
@@ -157,14 +173,13 @@ Snail Grand Prix begins in (text-color:red)[&#39;&#39;(print:$Days)&#39;&#39;] d
 Your not entirely sure how it relates to sports betting but you skimmed a lengthy reddit post about it. You are pretty sure that makes you an [[expert-&gt;betting]]</tw-passagedata><tw-passagedata pid="9" name="SnailDuel" tags="" position="1150,500" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXX=&quot;)[=
 (text-colour:black)+(bg:white)[=
 
-&lt;img src=&quot;SD.png&quot; style=&quot;width: 30%; height: auto;&quot;&gt;
+&lt;img src=&quot;SD.png&quot; style=&quot;width: 40%; height: auto;&quot;&gt;
 
 User Name:
 (force-input-box:2bind $user,&quot;==XXXX==&quot;,1,&quot;$nailL0ver#125&quot;)
 Password:
 (force-input-box:2bind $pass,&quot;==XXXX==&quot;,1,&quot;********&quot;)
 (b4r:&quot;inset&quot;)+(b4r-size:1.5)+(b4r-colour:blue)[(live:1s)[(if:$user is &quot;$nailL0ver#125&quot;)[(if:$pass is &quot;********&quot;)[(text-colour:blue)[[[Login-&gt;choice]]]](else:)[(text-colour:grey)[Login]]](else:)[(text-colour:grey)[Login]]]]
-
 </tw-passagedata><tw-passagedata pid="10" name="John&#39;s Hangover" tags="" position="975,900" size="100,100">&lt;img src=&quot;JH.png&quot; style=&quot;width: 50%; height: auto;&quot;&gt;
 
 John&#39;s Hangover&#39;s (also know as JH) story is famous in the racing world mostly for its strange name. JH named after its owner and trainer John, who grabbed it off the side of the road one after coming home drunk from the bar JH story shows how opportunity can come at the strangest time. John knew something was off when he woke up dazed and confused to find a snail in his house. Feeling regret for his actions the previous night and taking JH away from its home, John profuesly appologized. Now the two are inseperable duo.
@@ -237,7 +252,7 @@ Confusion: (print:$Confusion)
 IP infringement: (print:$IP)
 Consumerism: (print:$Consumerism)]
 
-All of these stats will definitely help you become better at betting
+Wow, now that is what a sucessful better looks like!
 
 [[Alright, maybe I should be doing something more productive-&gt;snail racing]] </tw-passagedata><tw-passagedata pid="17" name="text" tags="" position="1000,200" size="100,100">the other day you recieved a strange text from your friend, 
 
@@ -245,11 +260,11 @@ All of these stats will definitely help you become better at betting
 
 &quot;you know we&#39;ve made like 50k each sports betting, would you be at all interested? since your a friend we&#39;ll give you a free trial if you refer two of your friends.&quot;]
 
-wow 50k! that is the exact amount of money you need to pay off your debt. something feels a little bit off about this offer.
+wow 50k! that is the exact amount of money you need to pay off your debt. However, something feels a little bit off about this offer.
 
 [[&quot;Screw this scam!&quot; -&gt;snail racing]]
 [[pay the $30-&gt;ddiscord]]
-[[Scam your friends-&gt;fdiscord]]</tw-passagedata><tw-passagedata pid="18" name="skip" tags="" position="850,650" size="100,100">{
+[[Sell out your friends-&gt;fdiscord]]</tw-passagedata><tw-passagedata pid="18" name="skip" tags="" position="850,650" size="100,100">{
 (if:$JH is true)[Some of these snails have the strangest names... +3 to Confusion 
 (set: $Confusion to $Confusion+3)(set: $JH to false)]
 
@@ -268,40 +283,40 @@ All of that Reading made you tired.
 [[Go to sleep-&gt;snail racing]] 
 (set: $Days to $Days - 1)</tw-passagedata><tw-passagedata pid="19" name="ddiscord" tags="" position="1150,200" size="100,100">{
 (set: $Debt to $Debt+30)
-(set: $Pay to false)
+(set: $Pay to true)
 }Alrighty! You&#39;ve paid the premium and are now $&#39;&#39;(print:$Debt)&#39;&#39; in debt. Lets see what you can learn
 
 [[Ask about Snails-&gt;SnailPicks]]
 [[Ask about Parlay Bets-&gt;ParlyBets]]
 [[Ask what the betting odds mean-&gt;GeneralAdvice]] </tw-passagedata><tw-passagedata pid="20" name="SnailPicks" tags="" position="1325,200" size="100,100">(bg:(gradient: 0, 0.0178,#000000,0.9371,#495057,1,#adb5bd))[=
 (after:1s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:green)[StevenSnail]: //Biscuit// is overhyped]
-(after:2s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[StevenSnail]: lol, what a silly take]
-(after:4s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:green)[StevenSnail]: trust me, //Snailieman// is going to win]
-(after:4.8s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[DaliatheDrafter]: //Snailieman// has never won]
-(after:5s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[DaliatheDrafter]: //Snailieman// has never won]
-(after:5.2s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[DaliatheDrafterl]: //Snailieman// has never won]
-(after:7s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:red)[BobtheBetter]: woah]
-(after:9s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:red)[BobtheBetter]: I think Hercule will win]
+(after:2s)[(track: &#39;beep&#39;, &#39;stop&#39;)(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[StevenSnail]: lol, what a silly take]
+(after:4s)[(track: &#39;beep&#39;, &#39;stop&#39;)(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:green)[StevenSnail]: trust me, //Snailieman// is going to win]
+(after:4.8s)[(track: &#39;beep&#39;, &#39;stop&#39;)(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[DaliatheDrafter]: //Snailieman// has never won]
+(after:5s)[(track: &#39;beep&#39;, &#39;stop&#39;)(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[DaliatheDrafter]: //Snailieman// has never won]
+(after:5.2s)[(track: &#39;beep&#39;, &#39;stop&#39;)(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[DaliatheDrafterl]: //Snailieman// has never won]
+(after:7s)[(track: &#39;beep&#39;, &#39;stop&#39;)(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:red)[BobtheBetter]: woah]
+(after:9s)[(track: &#39;beep&#39;, &#39;stop&#39;)(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:red)[BobtheBetter]: I think Hercule will win]
 
 
-(after:9s)[[[Wow! a lack of a consensus this was helpful. Go to sleep-&gt;snail racing]]]
+(after:11s)[[[Wow! a lack of a consensus this was helpful. Go to sleep-&gt;snail racing]]]
 
 (set: $Days to $Days - 1)</tw-passagedata><tw-passagedata pid="21" name="ParlyBets" tags="" position="1325,75" size="100,100">&lt;==
 (bg:(gradient: 0, 0.0178,#000000,0.9371,#495057,1,#adb5bd))[=
 (after:1s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:red)[BobtheBetter]: It is a scam.]
-(after:1.5s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:red)[BobtheBetter]: Don&#39;t do it.]
-(after:3s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:red)[BobtheBetter]: They ask you to bet on two things at once.]
-(after:5s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:red)[BobtheBetter]: Both on which snail win and which snail will lose]
-(after:8s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:red)[BobtheBetter]: However, the odds aren&#39;t fairly set. Even if you win, they don&#39;t pay you correctly. You are getting paid less than if you made 2 bets, one on the winner and one on the loser.]
+(after:1.5s)[(track: &#39;beep&#39;, &#39;stop&#39;)(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:red)[BobtheBetter]: Don&#39;t do it.]
+(after:3s)[(track: &#39;beep&#39;, &#39;stop&#39;)(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:red)[BobtheBetter]: They ask you to bet on two things at once.]
+(after:5s)[(track: &#39;beep&#39;, &#39;stop&#39;)(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:red)[BobtheBetter]: Both on which snail win and which snail will lose]
+(after:8s)[(track: &#39;beep&#39;, &#39;stop&#39;)(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:red)[BobtheBetter]: However, the odds aren&#39;t fairly set. Even if you win, they don&#39;t pay you correctly. You are getting paid less than if you made two bets, one on the winner and one on the loser.]
 
-(after:8s)[[[Quit discord and go to sleep-&gt;snail racing]]]
+(after:10s)[[[Quit discord and go to sleep-&gt;snail racing]]]
 
 (set: $Days to $Days - 1)
 </tw-passagedata><tw-passagedata pid="22" name="computer" tags="" position="1000,500" size="100,100">(if:$Days is not 0)[Alright, betting time! Are you sure you are ready?
 
 [[I want to do more research-&gt;snail racing]]](else:)[Today is finally the day of the GrandPrix and it is time to place your bet. If you want to pay off your student loans of $(print:$Debt) you&#39;ll have to choose who to bet on carefully carefully]
 
-[[Open SnailDuel-&gt;SnailDuel]]]</tw-passagedata><tw-passagedata pid="23" name="hal.tracks" tags="" position="300,625" size="100,100">bgmusic: AmbientMarimba.wav
+[[Open SnailDuel-&gt;SnailDuel]]</tw-passagedata><tw-passagedata pid="23" name="hal.tracks" tags="" position="300,625" size="100,100">bgmusic: AmbientMarimba.wav
 beep: ping.mp3</tw-passagedata><tw-passagedata pid="24" name="Snaileiman odds" tags="" position="1500,450" size="100,100">The money line is +2000 meaning you&#39;d have to pay &#39;&#39;$2500&#39;&#39; to pay off your debt
 
 [[Confirm-&gt;SConfirm]]
@@ -346,13 +361,13 @@ But none of that matters because you lost and are now $(print:Debt) in Debt.
 [[Ask what the betting odds mean-&gt;GeneralAdvice]] </tw-passagedata><tw-passagedata pid="32" name="GeneralAdvice" tags="" position="1325,325" size="100,100">&lt;==
 (bg:(gradient: 0, 0.0178,#000000,0.9371,#495057,1,#adb5bd))[=
 (after:1s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[DaliatheDrafter]: When you make a bet]
-(after:2s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[DaliatheDrafter]: Draft websites provide a value called &quot;Money Line&quot;]
-(after:4s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[DaliatheDrafter]: It&#39;ll be like +100, +200 or sometimes +2000]
-(after:6.5s)[((track: &#39;beep&#39;, &#39;play&#39;)text-colour:blue)[DaliatheDrafter]: This is how much money you&#39;d make if you bet $100. So +200 means you double your money]
-(after:8s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[DaliatheDrafter]: So..]
-(after:11s)[(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[DaliatheDrafter]: The bigger the money line, the more money you could make, and the greater the risk]
+(after:2s)[(track: &#39;beep&#39;, &#39;stop&#39;)(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[DaliatheDrafter]: Draft websites provide a value called &quot;Money Line&quot;]
+(after:4s)[(track: &#39;beep&#39;, &#39;stop&#39;)(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[DaliatheDrafter]: It&#39;ll be like +100, +200 or sometimes +2000]
+(after:6.5s)[(track: &#39;beep&#39;, &#39;stop&#39;)(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[DaliatheDrafter]: This is how much money you&#39;d make if you bet $100. So +200 means you double your money]
+(after:8s)[(track: &#39;beep&#39;, &#39;stop&#39;)(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[DaliatheDrafter]: So..]
+(after:11s)[(track: &#39;beep&#39;, &#39;stop&#39;)(track: &#39;beep&#39;, &#39;play&#39;)(text-colour:blue)[DaliatheDrafter]: The bigger the money line, the more money you could make, and the greater the risk]
 
-(after:11s)[[[go to sleep-&gt;snail racing]]]
+(after:13s)[[[go to sleep-&gt;snail racing]]]
 
 
 (set: $Days to $Days - 1)</tw-passagedata><tw-passagedata pid="33" name="Discord" tags="" position="1150,325" size="100,100">(if:(history: where its name contains &quot;SnailPicks&quot;)&#39;s length is 0)[[[Ask about Snails-&gt;SnailPicks]]](else:)[(text-style:&quot;strike&quot;)[Ask about Snails]]
