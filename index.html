@@ -125,7 +125,7 @@ Unfortunately in this economy finding entry level jobs with your degree is diffi
 (set: $HP to false)
 (set: $JH to false)
 (set: $Pay to false)
-
+(set: $Days to 5)
 (set: $Sagacity to 0)
 (set: $Worldliness to 0)
 (set: $Confusion to 0)
@@ -283,7 +283,7 @@ All of that Reading made you tired.
 (set: $Days to $Days - 1)</tw-passagedata><tw-passagedata pid="19" name="ddiscord" tags="" position="1150,200" size="100,100">{
 (set: $Debt to $Debt+30)
 (set: $Pay to true)
-}Alrighty! You&#39;ve paid the premium and are now $&#39;&#39;(print:$Debt)&#39;&#39; in debt. Lets see what you can learn
+}Alrighty! You&#39;ve paid the premium and are now $&#39;&#39;(print:$Debt)&#39;&#39; in debt. Let&#39;s see what you can learn
 
 [[Ask about Snails-&gt;SnailPicks]]
 [[Ask about Parlay Bets-&gt;ParlyBets]]
@@ -352,7 +352,7 @@ But none of that matters because you lost and are now $(print:$Debt) in Debt.
 [[play again -&gt;Homepage]] </tw-passagedata><tw-passagedata pid="31" name="fdiscord" tags="" position="1150,75" size="100,100">{
 (set: $Morality to $Morality-1)
 (set: $Pay to true)
-}Wow you really scammed your other friends. -1 to Morality. Lets see what you can learn
+}Wow you really scammed your other friends. -1 to Morality. Let&#39;s see what you can learn
 
 
 [[Ask about Snails-&gt;SnailPicks]]
